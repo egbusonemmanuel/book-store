@@ -35,10 +35,8 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      padding: 10px 15px;
+      padding: 10px 20px;
       font-size: 0.9rem;
-      text-align: center;
-      gap: 5px;
     }
     #intro i {
       margin-right: 6px;
@@ -46,6 +44,10 @@
     }
 
     /* Navbar */
+    nav {
+      background: #fff;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+    }
     nav .navbar-brand {
       font-weight: bold;
       color: #0b1c39;
@@ -53,6 +55,7 @@
     nav .nav-link {
       color: #0b1c39 !important;
       margin: 0 8px;
+      transition: 0.3s;
       position: relative;
     }
     nav .nav-link::after {
@@ -72,8 +75,7 @@
     /* Hero */
     #slide img {
       width: 100%;
-      height: auto;
-      max-height: 500px;
+      height: 450px;
       object-fit: cover;
       border-radius: 0 0 20px 20px;
       animation: fadeIn 2s ease-in-out;
@@ -83,16 +85,16 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* Section Headings */
-    h2.section-title {
-      font-weight: bold;
-      color: #0b1c39;
-      margin-bottom: 20px;
-    }
-
     /* About */
+    #contain1 {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 60px 10%;
+      gap: 30px;
+      align-items: center;
+      background: #fff;
+    }
     #contain1 img {
-      width: 100%;
       max-width: 350px;
       border-radius: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -101,8 +103,28 @@
     #contain1 img:hover {
       transform: scale(1.05) rotate(-2deg);
     }
+    #contain1 h2 {
+      font-weight: bold;
+      color: #0b1c39;
+    }
 
     /* Book Summary */
+    #contain2 {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 60px 10%;
+      gap: 40px;
+      align-items: center;
+      background: #f5f7fa;
+    }
+    #cont21 {
+      flex: 1;
+      min-width: 300px;
+    }
+    #cont22 {
+      flex: 1;
+      text-align: center;
+    }
     #cont22 img {
       max-width: 300px;
       border-radius: 15px;
@@ -128,7 +150,7 @@
       box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
 
-    /* Contact */
+    /* Contact Section */
     #contact {
       background: #0b1c39;
       color: #fff;
@@ -179,7 +201,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm" data-aos="fade-down" data-aos-delay="200">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top" data-aos="fade-down" data-aos-delay="200">
     <div class="container">
       <a class="navbar-brand" href="#">LT Books</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -202,36 +224,38 @@
   </div>
 
   <!-- About -->
-  <section id="contain1" class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right">
-        <img src="lucky.jpg" alt="Author Picture">
-      </div>
-      <div class="col-md-7" data-aos="fade-left">
-        <h2 class="section-title">About the Author</h2>
-        <p>Dr. Lucky Tamunoibelema is a seasoned leader with over 30 years of experience in supply chain management,
-          logistics, real estate, education, and human resources...</p>
-      </div>
+  <div id="contain1">
+    <div id="cont11" data-aos="fade-right">
+      <img src="lucky.jpg" alt="Author Picture">
     </div>
-  </section>
+    <div id="cont12" data-aos="fade-left">
+      <h2>About the Author</h2>
+      <p>Dr. Lucky Tamunoibelema is a seasoned leader with over 30 years of experience in supply chain management,
+        logistics, real estate, education, and human resources. He holds a PhD in Logistics and Supply Chain Management 
+        (Rexford Business University, USA, 2024) with research focused on sustainable practices in Nigeria.</p>
+      <p>He has held major leadership roles in the energy, logistics, and education sectors, including positions at NGIC Abuja and NNPC subsidiaries...</p>
+    </div>
+  </div>
 
   <!-- Book Summary -->
-  <section id="contain2" class="container-fluid py-5 bg-light">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-md-6 px-4" id="cont21" data-aos="fade-up">
-        <h2 class="section-title">Dreams Never Die 2</h2>
-        <p><strong>Summary:</strong> Dreams Never Die 2 is a reflective memoir intertwining Nigeria’s turbulent 1980s 
-          under military rule with the author’s personal coming-of-age story...</p>
-      </div>
-      <div class="col-md-4 text-center" id="cont22" data-aos="fade-left">
-        <img src="coverphoto.jpg" alt="Book Cover">
-        <br>
-        <a href="books.html" class="btn mt-3">Read More <i class="fas fa-book-open"></i></a>
-      </div>
+  <div id="contain2">
+    <div id="cont21" data-aos="fade-up">
+      <h2>Dreams Never Die 2</h2>
+      <p><strong>Summary:</strong> Dreams Never Die 2 is a reflective memoir intertwining Nigeria’s turbulent 1980s 
+        under military rule with the author’s personal coming-of-age story. Against a backdrop of 
+        economic hardship, political instability, and social unrest, the author recounts his time on a 
+        remote fishing island under the guidance of “the Oldman.”</p>
+      <p>Blending autobiography, social commentary, and oral tradition, the book highlights mentorship, 
+        personal growth, and the power of dreams...</p>
     </div>
-  </section>
+    <div id="cont22" data-aos="fade-left">
+      <img src="coverphoto.jpg" alt="Book Cover">
+      <br>
+      <a href="books.html" class="btn">Read More <i class="fas fa-book-open"></i></a>
+    </div>
+  </div>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <p><i class="fas fa-envelope"></i> lucky.tamunoibelema@gmail.com</p>
