@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lucky Tamunoibelema Books</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="font/css/all.css">
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      background: #f4f6fa;
+      color: #333;
+    }
+    /* Hero */
+    #hero {
+      background: linear-gradient(rgba(10, 20, 40, 0.8), rgba(10, 20, 40, 0.8)), url('background-2.jpg') center/cover;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    #hero h1 { font-size: 42px; margin-bottom: 10px; }
+    #hero p { font-size: 18px; opacity: 0.9; }
+
+    /* Summary */
+    #summary {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    #summary h2 { text-align: center; color: #2c3e50; margin-bottom: 25px; }
+    #summary p { font-size: 17px; line-height: 1.7; }
+    .btn-main {
+      background: #e1b12c;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .btn-main:hover { background: #c89614; }
+
+    /* Payment */
+    #payment {
+      background: #fff;
+      padding: 40px;
+      margin: 50px auto;
+      text-align: center;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    #payment h2 { margin-bottom: 20px; }
+    #donationAmount {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      width: 200px;
+      text-align: center;
+    }
+    .copy-btn {
+      background: #2ecc71;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .copy-btn:hover { background: #27ae60; }
+
+    /* Contact */
+    #contact {
+      background: #0a1428;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    #contact h2 { margin-bottom: 30px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .contact-item {
+      background: #111c33;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .contact-item:hover { background: #1b2a4a; }
+    .contact-item i { font-size: 24px; margin-bottom: 10px; color: #e1b12c; }
+
+    footer {
+      background: #070d18;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Lucky Tamunoibelema</h1>
+    <p>Author | Educator | Supply Chain Leader</p>
+  </section>
+
+  <!-- Summary -->
+  <section id="summary">
+    <h2>📖 Dreams Never Die 2</h2>
+    <p>
+      <b>Dreams Never Die 2</b> is both a memoir and a social commentary,
+      blending the author’s personal journey with Nigeria’s turbulent 1980s.
+      Against a backdrop of economic hardship, political instability, and social unrest, 
+      the narrative explores resilience, mentorship, and the transformative power of education.
+    </p>
+    <a href="books/dreams-never-die-2.pdf" target="_blank" class="btn-main">
+      Read Full Book <i class="fas fa-book-open"></i>
+    </a>
+  </section>
+
+  <!-- Payment -->
+  <section id="payment">
+    <h2>💳 Support the Author</h2>
+    <p>Your support helps share knowledge and stories with the world.</p>
+
+    <input type="number" id="donationAmount" placeholder="Enter amount (optional)">
+    <br>
+    <button id="donateButton" class="copy-btn">Show Account Details</button>
+
+    <div id="accountDetails" style="display:none; margin-top:15px; background:#f1f1f1; padding:15px; border-radius:8px;">
+      <p><b>Bank Name:</b> Access Bank</p>
+      <p><b>Account Name:</b> Lucky Tamunoibelema</p>
+      <p><b>Account Number:</b> <span id="accountNumber">0123456789</span>
+        <button id="copyBtn" class="copy-btn" style="padding:5px 10px; font-size:14px;">Copy</button>
+      </p>
+      <p>Use your bank app or USSD to make the donation. Thank you! 🙏</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>📬 Get in Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p>lucky.tamunoibelema@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <p>+234 801 234 5678</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Abuja, Nigeria</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Lucky Tamunoibelema | All Rights Reserved
+  </footer>
+
+  <script>
+    const donateBtn = document.getElementById("donateButton");
+    const accountDiv = document.getElementById("accountDetails");
+    const copyBtn = document.getElementById("copyBtn");
+    const accountNumber = document.getElementById("accountNumber");
+
+    donateBtn.addEventListener("click", () => {
+      accountDiv.style.display = accountDiv.style.display === "none" ? "block" : "none";
+    });
+
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(accountNumber.textContent).then(() => {
+        alert("Account number copied! ✅");
+      });
+    });
+  </script>
+
+</body>
+</html>
